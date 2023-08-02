@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import Modal from "react-modal";
 import { toast } from "react-toastify";
@@ -108,14 +109,28 @@ const CategoriesP = () => {
         </button>
       </div>
       <div className="row">
-        {categories.map(({ name, avatar, description, id }) => (
+        {categories.map(({ avatar, name, data, job, country, id }) => (
           <div className="card" key={id}>
-            <div className="card-img">
-              <LazyLoadImage src={avatar} />
-            </div>
+            <Link to={`/user/${id}/movie`}>
+              <div className="card-img">
+                <LazyLoadImage src={avatar} />
+              </div>
+            </Link>
             <div className="card-body">
-              <h3>{name}</h3>
-              <p>{description}</p>
+              <Link to={`/user/${id}/movie`}>
+                <p>
+                  Name: <span>{name}</span>
+                </p>
+                <p>
+                  Data: <span>{data}</span>
+                </p>
+                <p>
+                  Job: <span>{job}</span>
+                </p>
+                <p>
+                  Country: <span>{country}</span>
+                </p>
+              </Link>
               <button className="btn btn-primary" onClick={() => edit(id)}>
                 Edit
               </button>

@@ -9,6 +9,57 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: darkcyan !important;
+
+
+a {
+  text-decoration: none !important;
+}
+
+header {
+  background-color: black;
+  padding: 25px 0px 25px;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-link h1 {
+  color: white;
+}
+
+
+.movie-title {
+  text-align: center;
+  margin: 50px 0px 50px;
+  padding: 20px 0px 20px;
+  background-color: black;
+  color: white;
+}
+
+.card-movie-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  padding: 50px 0px 50px;
+
+}
+
+.card-movie {
+  background-color: black;
+}
+.card-movie img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-body-movie {
+  text-align: center;
+  padding: 25px 0 25px;
+  color: white;
+}
+
+.card-body-movie p {
+  margin-top: 15px;
 }
