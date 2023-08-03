@@ -161,10 +161,38 @@ const CategoriesP = () => {
           )}
           <div className="input-group mb-3">
             <input
+              required
+              {...register("avatar")}
+              type="text"
+              className="form-control"
+              placeholder="Data"
+            />
+          </div>
+          <div className="input-group mb-3">
+            <input
+              required
               {...register("avatar")}
               type="text"
               className="form-control"
               placeholder="Image"
+            />
+          </div>
+          <div className="input-group mb-3">
+            <input
+              required
+              {...register("avatar")}
+              type="text"
+              className="form-control"
+              placeholder="Job"
+            />
+          </div>
+          <div className="input-group mb-3">
+            <input
+              required
+              {...register("avatar")}
+              type="text"
+              className="form-control"
+              placeholder="Country"
             />
           </div>
           {errors.avatar && (
